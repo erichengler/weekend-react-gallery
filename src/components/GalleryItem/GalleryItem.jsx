@@ -11,6 +11,7 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 function GalleryItem ({ item, fetchGalleryList }) {
 
     // PUT request to add a like
+    // TODO : Change thumbs up icon here
     const addLike = (e) => {
         console.log(`addLike for ${item.id}`);
         axios.put(`/gallery/like/${item.id}`).then((response) => {
@@ -43,7 +44,6 @@ function GalleryItem ({ item, fetchGalleryList }) {
                         {item.likes} &nbsp;
                         <ThumbUpOutlinedIcon 
                             onClick={(e) => addLike(e)} 
-                            // onClick={(e) => changeIcon(e)}
                         />
                         
                     </CardActions>
