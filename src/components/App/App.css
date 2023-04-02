@@ -1,8 +1,11 @@
 .App {
+  display: grid;
   text-align: center;
+  justify-content: center;
 }
 
 .App-header {
+  text-align: center;
   background-color: #222;
   padding: 1em;
   color: white;

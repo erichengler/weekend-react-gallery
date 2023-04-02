@@ -1,11 +1,13 @@
 import React from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 function GalleryList ({ galleryList, fetchGalleryList }) {
 
     return (
-        <div>
-            <ul>
+        <Container>
+            <Grid container spacing={2}>
                 {
                     galleryList.map((item) => (
                         <GalleryItem 
@@ -15,8 +17,8 @@ function GalleryList ({ galleryList, fetchGalleryList }) {
                         />
                     ))
                 }
-            </ul>
-        </div>
+            </Grid>
+        </Container>
     )
 }
 
