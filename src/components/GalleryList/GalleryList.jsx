@@ -1,7 +1,7 @@
 import React from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList ({ galleryList }) {
+function GalleryList ({ galleryList, fetchGalleryList }) {
 
     return (
         <div>
@@ -11,6 +11,7 @@ function GalleryList ({ galleryList }) {
                         <GalleryItem 
                             key={item.id}
                             item={item}
+                            fetchGalleryList={fetchGalleryList}
                         />
                     ))
                 }

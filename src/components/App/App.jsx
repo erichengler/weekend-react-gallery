@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import GalleryItem from '../GalleryItem/GalleryItem';
 import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
@@ -29,6 +28,7 @@ function App() {
             </header>
             <GalleryList 
                 galleryList={galleryList}
+                fetchGalleryList={fetchGalleryList}
             />
         </div>
     );
