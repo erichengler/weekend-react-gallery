@@ -15,7 +15,7 @@ function GalleryItem ({ item, fetchGalleryList }) {
     }
 
     return (
-        <>
+        <div>
             {item.title}
             <br />
             <img src={`${item.path}`} width='200px'/>
@@ -28,7 +28,7 @@ function GalleryItem ({ item, fetchGalleryList }) {
             <br />
             <br />
             <br />
-        </>
+        </div>
     )
 }
 
