@@ -23,8 +23,13 @@ function GalleryItem ({ item, fetchGalleryList }) {
     }
 
     return (
-            <Grid>
-                <Card sx={{maxWidth: 252}} >
+            <Grid sx={{
+                mx: '90px',
+                my: '50px',
+            }}>
+                <Card sx={{
+                    maxWidth: 300,
+                }}>
 
                     <CardContent>
                         <Typography variant="h5">
@@ -32,7 +37,7 @@ function GalleryItem ({ item, fetchGalleryList }) {
                         </Typography>
 
                         <Typography>
-                            <img src={`${item.path}`} width='200px' height='200px' />
+                            <img border='1px solid black' src={`${item.path}`} width='220px' height='220px' />
                         </Typography>
 
                         <Typography>
