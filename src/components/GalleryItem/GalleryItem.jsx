@@ -25,7 +25,7 @@ function GalleryItem ({ item, fetchGalleryList }) {
     return (
             <Grid sx={{
                 mx: '80px',
-                my: '30px',
+                my: '25px',
             }}>
                 <Card className='Card' sx={{
                     maxWidth: 300,
