@@ -1,15 +1,13 @@
 .App {
-  display: grid;
+  background-color: rgb(80, 94, 116);
   text-align: center;
-  justify-content: center;
 }
 
 .App-header {
   text-align: center;
   background-color: #222;
   padding: 1em;
-  color: white;
-  margin-bottom: 1em;
+  color: rgb(160, 185, 205);
 }
 
 .App-title {

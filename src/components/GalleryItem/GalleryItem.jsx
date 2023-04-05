@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import './GalleryItem.css'
 
 function GalleryItem ({ item, fetchGalleryList }) {
 
@@ -27,7 +28,7 @@ function GalleryItem ({ item, fetchGalleryList }) {
                 mx: '90px',
                 my: '50px',
             }}>
-                <Card sx={{
+                <Card className='Card' sx={{
                     maxWidth: 300,
                 }}>
 
