@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './GalleryItem.css'
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -7,7 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-import './GalleryItem.css'
+
 
 function GalleryItem ({ item, fetchGalleryList }) {
 
@@ -25,8 +26,8 @@ function GalleryItem ({ item, fetchGalleryList }) {
 
     return (
             <Grid sx={{
-                mx: '90px',
-                my: '50px',
+                mx: '80px',
+                my: '30px',
             }}>
                 <Card className='Card' sx={{
                     maxWidth: 300,
