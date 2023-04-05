@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import './GalleryItem.css'
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -13,7 +12,6 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 function GalleryItem ({ item, fetchGalleryList }) {
 
     // PUT request to add a like
-    // TODO : Change thumbs up icon here
     const addLike = (e) => {
         console.log(`addLike for ${item.id}`);
         axios.put(`/gallery/like/${item.id}`).then((response) => {
@@ -31,6 +29,8 @@ function GalleryItem ({ item, fetchGalleryList }) {
             }}>
                 <Card className='Card' sx={{
                     maxWidth: 300,
+                    backgroundColor: 'rgb(160, 185, 205)',
+                    border: '1px solid rgb(49, 49, 49)'
                 }}>
 
                     <CardContent>
@@ -48,10 +48,29 @@ function GalleryItem ({ item, fetchGalleryList }) {
                     </CardContent>
 
                     <CardActions sx={{justifyContent: "flex-end"}}>
+
+                        {/* 
+                            I realize that as soon as there is at least 1 like,
+                            the filled in thumbs up icon will appear for everyone.
+
+                            Ideally, I would only display the filled in icon if
+                            the current user has liked the image.
+                        */}
+
                         {item.likes} &nbsp;
-                        <ThumbUpOutlinedIcon 
-                            onClick={(e) => addLike(e)} 
-                        />
+                        {
+                            item.likes === 0 ? (
+                                <ThumbUpOutlinedIcon 
+                                    onClick={(e) => addLike(e)} 
+                                />
+                            ) : (
+                                <ThumbUpAltIcon 
+                                    // onClick={(e) => removeLike(e)}
+                                />                              
+                            )
+                        }
+
+
                         
                     </CardActions>
 
