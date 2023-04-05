@@ -27,24 +27,28 @@ function GalleryItem ({ item, fetchGalleryList }) {
                 mx: '80px',
                 my: '25px',
             }}>
-                <Card className='Card' sx={{
+                <Card sx={{
                     maxWidth: 300,
                     backgroundColor: 'rgb(160, 185, 205)',
-                    border: '1px solid rgb(49, 49, 49)'
+                    border: '1px solid rgb(49, 49, 49)',
                 }}>
-
                     <CardContent>
                         <Typography variant="h5">
                             {item.title}
                         </Typography>
-
-                        <Typography>
+                        
+                    {/* TODO: onClick replace this with Item Description */}
+                        <Typography sx={{
+                            mx: '20px'
+                        }}>
                             <img border='1px solid black' src={`${item.path}`} width='220px' height='220px' />
                         </Typography>
 
-                        <Typography>
+                    {/* Item Description */}
+                        {/* <Typography>
                             {item.description}
-                        </Typography>
+                        </Typography> */}
+                        
                     </CardContent>
 
                     <CardActions sx={{justifyContent: "flex-end"}}>
@@ -70,10 +74,7 @@ function GalleryItem ({ item, fetchGalleryList }) {
                             )
                         }
 
-
-                        
                     </CardActions>
-
                 </Card>
             </Grid>   
     )
