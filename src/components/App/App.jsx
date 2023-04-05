@@ -12,7 +12,7 @@ function App() {
             setGalleryList(response.data);
         }).catch((error) => {
             console.log(`Error in GET ${error}`);
-            alert('Something went wrong.');
+            // alert('Something went wrong.');
         })
     };
 

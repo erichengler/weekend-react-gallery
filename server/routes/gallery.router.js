@@ -9,8 +9,10 @@ router.put('/like/:id', (req, res) => {
     console.log(req.params);
     const galleryId = req.params.id;
     for(const galleryItem of galleryItems) {
-        if(galleryItem.id == galleryId) {
+        if( galleryItem.id == galleryId && galleryItem.likes === 0 ) {
             galleryItem.likes += 1;
+        } else if ( galleryItem.id == galleryId && galleryItem.likes > 0 ) {
+            galleryItem.likes -= 1;
         }
     }
     res.sendStatus(200);
