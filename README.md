@@ -1,9 +1,24 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Weekend Challenge - React Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+The goal of this project was to create a gallery of images on the page. Each image has a title, a description and a button that the user can click to like the image. Clicking on an image will change the display of the associated card to show the description, and clicking the description will change the display back to the image. Once an image is liked, the like button can be clicked again to unlike the image. The width of the gallery maxes out at 3 images wide.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Screenshot
+
+![preview](./public/images/gallery_preview.png)
+
+## Prerequisites
+
+1. Node.js
+
+2. React
+
+## Installation
+
+1. Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`
+
+2. In a terminal window, type `npm install` and then `npm run server`
+
+3. In a new terminal window, type `npm run client`
+
