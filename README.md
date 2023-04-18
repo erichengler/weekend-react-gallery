@@ -2,7 +2,7 @@
 
 ## Description
 
-The goal of this project was to create a gallery of images on the page. Each image has a title, a description and a button that the user can click to like the image. Clicking on an image will change the display of the associated card to show the description, and clicking the description will change the display back to the image. Once an image is liked, the like button can be clicked again to unlike the image. The width of the gallery maxes out at 3 images wide.
+The goal of this project was to create a gallery of images on the page. Each image has a title, a description and a thumbs-up icon that the user can click to add a like the image. Clicking on an image will change the display of the associated card to show the description, and clicking the description will change the display back to the image. The width of the gallery maxes out at 3 images wide.
 
 I learned a lot about React props, conditional rendering and Material UI while working on this project and I had a lot of fun putting it all together.
 
