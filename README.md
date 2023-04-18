@@ -24,3 +24,7 @@ I learned a lot about React props, conditional rendering and Material UI while w
 
 3. In a new terminal window, type `npm run client`
 
+## Acknowledgement
+
+Thanks to Chris Black and Prime Digital Academy for providing me with the knowledge I needed to make this!
+
