@@ -8,7 +8,7 @@ The project contains a gallery of images. These pictures are of important people
 
 ## Preview
 
-![preview](./public/images/gallery_preview.png)
+![preview](./public/images/preview.png)
 
 ## Installation / Setup
 
