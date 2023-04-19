@@ -73,16 +73,6 @@ function GalleryItem({ item, fetchGalleryList }) {
                 
                 <CardActions sx={{ justifyContent: "flex-end", cursor: 'pointer' }}>
 
-                {/* 
-                I realize that as soon as there is 1 like,
-                the filled in thumbs up icon will appear for everyone.
-
-                Ideally, I would only display the filled in icon if
-                the current user has liked the image.
-
-                I just wanted more practice with conditional rendering.
-                */}
-
                     {item.likes} &nbsp;
                     {
                         item.likes === 0 ? (
