@@ -2,7 +2,7 @@
 
 ## Description
 
-Duration: A few days of work over a week-long period
+Duration: A few days of work over a two week period
 
 The goal of this project was to create a gallery of images on the page. Each image has a title, a description and a thumbs-up icon that the user can click to add a like the image. Clicking on an image will change the display of the associated card to show the description, and clicking the description will change the display back to the image. The width of the gallery maxes out at 3 images wide.
 
