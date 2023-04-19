@@ -24,7 +24,7 @@ I learned a lot about React props, conditional rendering and Material UI while w
 
 3. In a new terminal window, type `npm run client`
 
-##Built With
+## Built With
 
 1. React
 2. MUI
