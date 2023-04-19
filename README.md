@@ -8,7 +8,7 @@ The goal of this project was to create a gallery of images on the page. Each ima
 
 I learned a lot about React props, conditional rendering and Material UI while working on this project and I had a lot of fun putting it all together.
 
-## Screenshot
+## Preview
 
 ![preview](./public/images/gallery_preview.png)
 
