@@ -4,41 +4,40 @@
 
 Duration: A few days of work over a two week period
 
-The goal of this project was to create a gallery of images on the page. Each image has a title, a description and a thumbs-up icon that the user can click to add a like the image. Clicking on an image will change the display of the associated card to show the description, and clicking the description will change the display back to the image. The width of the gallery maxes out at 3 images wide.
-
-I learned a lot about React props, conditional rendering and Material UI while working on this project and I had a lot of fun putting it all together.
+The project contains a gallery of images. These pictures are of important people or things in my life. Each image has a title, a description and a thumbs-up icon with the number of likes the image has. The width of the gallery maxes out at 3 images wide.
 
 ## Preview
 
 ![preview](./public/images/gallery_preview.png)
 
-## Prerequisites
+## Installation / Setup
 
-1. Node.js
-2. React
-3. Nodemon
+1. Clone down this repository. You will need node and npm installed globally on your machine.
+2. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`
+3. In a terminal window, type `npm install` and then `npm run server`
+4. In a new terminal window, type `npm run client`
 
-## Installation
+## Usage
 
-1. Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`
-
-2. In a terminal window, type `npm install` and then `npm run server`
-
-3. In a new terminal window, type `npm run client`
+The user can click the thumbs-up icon to add a like the image. If the user clicks on an image, this will change the display of the associated card to show a description of that image. If the user clicks on the description, this will change the display back to the image.
 
 ## Built With
 
-1. React
-2. MaterialUI
-3. Node.js
-4. Axios
+- React
+- MaterialUI
+- Node.js
+- Axios
+
+## Reflection
+
+I learned a lot about React props, conditional rendering and Material UI while working on this project and I had a lot of fun putting it all together. Material UI seems like a very easy way to make your projects look a lot better! 
 
 ## Acknowledgement
 
-Thanks to Chris Black and Prime Digital Academy for providing me with the knowledge I needed to make this!
+Thanks to Chris Black and Prime Digital Academy for making this possible!
 
 ## Support
 
-If you have issues or suggestions, please feel free to email me at erichjohnengler@gmail.com
+If you have issues or suggestions, please email me at erichjohnengler@gmail.com
 
 Thanks!
