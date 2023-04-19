@@ -27,7 +27,7 @@ I learned a lot about React props, conditional rendering and Material UI while w
 ## Built With
 
 1. React
-2. MUI
+2. MaterialUI
 3. Node.js
 4. Axios
 
