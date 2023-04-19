@@ -13,8 +13,8 @@ I learned a lot about React props, conditional rendering and Material UI while w
 ## Prerequisites
 
 1. Node.js
-
 2. React
+3. Nodemon
 
 ## Installation
 
@@ -24,7 +24,19 @@ I learned a lot about React props, conditional rendering and Material UI while w
 
 3. In a new terminal window, type `npm run client`
 
+##Built With
+
+1. React
+2. MUI
+3. Node.js
+4. Axios
+
 ## Acknowledgement
 
 Thanks to Chris Black and Prime Digital Academy for providing me with the knowledge I needed to make this!
 
+## Support
+
+If you have issues or suggestions, please feel free to email me at erichjohnengler@gmail.com
+
+Thanks!
