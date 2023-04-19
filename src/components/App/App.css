@@ -1,6 +1,6 @@
 body {
   height: auto;
-  background-color: rgb(80, 94, 116);
+  background-color: #4B4952;
 }
 
 .App {
@@ -9,9 +9,9 @@ body {
 
 .App-header {
   text-align: center;
-  background-color: #222;
+  background-color: #1F2024;
   padding: 1em;
-  color: rgb(160, 185, 205);
+  color: #A68F97;
 }
 
 .App-title {

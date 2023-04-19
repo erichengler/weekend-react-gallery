@@ -28,14 +28,14 @@ function GalleryItem({ item, fetchGalleryList }) {
     return (
         <Grid sx={{
             // Space between cards on the grid
-            mx: '80px',
-            my: '40px',
+            mx: '40px',
+            my: '20px',
         }}>
             <Card sx={{
                 // Styling of each card
                 width: 300,
                 height: 330,
-                backgroundColor: 'rgb(160, 185, 205)',
+                backgroundColor: '#79717A',
                 border: '1px solid rgb(49, 49, 49)',
             }}>
                 <CardContent>
