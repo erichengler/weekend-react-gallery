@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
+import Form from '../Form/Form';
 
 function App() {
     let [galleryList, setGalleryList] = useState([])
@@ -32,6 +33,8 @@ function App() {
                     galleryList={galleryList}
                     fetchGalleryList={fetchGalleryList}
                 />
+                <br /><br />
+                <Form />
             </div>
         </div>
     );
