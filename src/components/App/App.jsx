@@ -4,7 +4,7 @@ import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
-    const [galleryList, setGalleryList] = useState([])
+    let [galleryList, setGalleryList] = useState([])
 
     // Axios GET Request to get data from /gallery
     const fetchGalleryList = () => {
@@ -12,7 +12,7 @@ function App() {
             setGalleryList(response.data);
         }).catch((error) => {
             console.log(`Error in GET ${error}`);
-            // alert('Something went wrong.');
+            alert('Something went wrong.');
         })
     };
 

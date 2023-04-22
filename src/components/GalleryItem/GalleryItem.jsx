@@ -15,9 +15,9 @@ function GalleryItem({ item, fetchGalleryList }) {
     let [display, setDisplay] = useState('picture')
 
     // PUT request to add a like
-    const addRemoveLike = (e) => {
+    const addLike = (e) => {
         console.log(`addLike for ${item.id}`);
-        axios.put(`/gallery/like/${item.id}`).then((response) => {
+        axios.put(`/gallery/${item.id}`).then((response) => {
             fetchGalleryList();
         }).catch(error => {
             console.log(`Error in addLike ${error}`);
@@ -77,11 +77,11 @@ function GalleryItem({ item, fetchGalleryList }) {
                     {
                         item.likes === 0 ? (
                             <ThumbUpOutlinedIcon
-                                onClick={(e) => addRemoveLike(e)}
+                                onClick={(e) => addLike(e)}
                             />
                         ) : (
                             <ThumbUpAltIcon
-                                onClick={(e) => addRemoveLike(e)}
+                                onClick={(e) => addLike(e)}
                             />
                         )
                     }

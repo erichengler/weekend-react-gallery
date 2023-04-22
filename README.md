@@ -13,9 +13,10 @@ The project contains a gallery of images. These pictures are of important people
 ## Installation / Setup
 
 1. Clone down this repository. You will need node and npm installed globally on your machine.
-2. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`
-3. In a terminal window, type `npm install` and then `npm run server`
-4. In a new terminal window, type `npm run client`
+2. Create a database named `react_gallery`
+3. Create a table and insert values using the information in `database.sql`
+4. In a terminal window, type `npm install` and then `npm run server`
+5. In a new terminal window, type `npm run client`
 
 ## Usage
 
@@ -23,10 +24,12 @@ The user can click the thumbs-up icon to add a like the image. If the user click
 
 ## Built With
 
+- JavaScript
 - React
 - MaterialUI
 - Node.js
 - Axios
+- PostgreSQL
 
 ## Reflection
 
