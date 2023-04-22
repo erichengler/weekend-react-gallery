@@ -6,6 +6,8 @@ Duration: A few days of work over a two week period
 
 The project contains a gallery of images. These pictures are of important people or things in my life. Each image has a title, a description and a thumbs-up icon with the number of likes the image has. The width of the gallery maxes out at 3 images wide.
 
+I came back to this assignment and moved the data (titles, images, descriptions and likes) to a database to attempt some stretch goals.
+
 ## Preview
 
 ![preview](./public/images/preview.png)
