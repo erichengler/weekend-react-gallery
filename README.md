@@ -35,7 +35,7 @@ The user can click the thumbs-up icon to add a like the image. If the user click
 
 ## Reflection
 
-I learned a lot about React props, conditional rendering and Material UI while working on this project and I had a lot of fun putting it all together. Material UI seems like a very easy way to make your projects look a lot better! 
+I learned a lot about React props, conditional rendering and Material UI while working on this project and I had a lot of fun putting it all together. Material UI seems like a very easy way to make your projects look a lot better and I find it really fun to mess around with it! 
 
 ## Acknowledgement
 
