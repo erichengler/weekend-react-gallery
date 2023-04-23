@@ -6,9 +6,9 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import Paper from '@mui/material/Paper';
 
 function GalleryItem({ item, fetchGalleryList }) {
 
@@ -48,6 +48,7 @@ function GalleryItem({ item, fetchGalleryList }) {
                 // Styling of each card
                 width: 300,
                 height: 330,
+                maxHeight: 330,
                 backgroundColor: '#79717A',
                 border: '1px solid rgb(49, 49, 49)',
             }}>
@@ -70,7 +71,8 @@ function GalleryItem({ item, fetchGalleryList }) {
                                 </Typography>
                             ) : (
                                 <Typography
-                                    sx={{ my: '90px', mx: '20px' }}
+                                    sx={{ my: '90px', mx: '15px', 
+                                        minHeight: '47px', maxHeight: '47px' }}
                                     onClick={(e) => setDisplay(display = 'picture')}
                                 >
                                     {item.description}
@@ -80,19 +82,10 @@ function GalleryItem({ item, fetchGalleryList }) {
                     </div>
                 </CardContent>
                 <CardActions>
-                    {
-                        item.likes === 0 ? (
-                            <ThumbUpOutlinedIcon
-                                sx={{ cursor: 'pointer' }}
-                                onClick={(e) => addLike(e)}
-                            />
-                        ) : (
-                            <ThumbUpAltIcon
-                                sx={{ cursor: 'pointer' }}
-                                onClick={(e) => addLike(e)}
-                            />
-                        )
-                    }
+                    <ThumbUpAltIcon
+                        sx={{ cursor: 'pointer' }}
+                        onClick={(e) => addLike(e)}
+                    />
                     &nbsp; {item.likes}
 
                     <DeleteForeverIcon

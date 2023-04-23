@@ -4,9 +4,9 @@
 
 Duration: A few days of work over a two week period
 
-The project contains a gallery of images. These pictures are of important people or things in my life. Each image has a title, a description and a thumbs-up icon with the number of likes the image has. The width of the gallery maxes out at 3 images wide.
+The project contains a gallery of images. These images are of important people or things in my life! Each image has a title, a description, a delete icon and a thumbs-up icon with the number of likes the image has. The width of the gallery maxes out at 3 images wide. Users can post a new gallery item by using the form at the top of the page.
 
-I came back to this assignment and moved the data (titles, images, descriptions and likes) to a database to attempt some stretch goals.
+I came back to this assignment and moved the data (titles, images, descriptions and likes) to a database to attempt some stretch goals and to get some more practice in.
 
 ## Preview
 
@@ -22,7 +22,11 @@ I came back to this assignment and moved the data (titles, images, descriptions 
 
 ## Usage
 
-The user can click the thumbs-up icon to add a like the image. If the user clicks on an image, this will change the display of the associated card to show a description of that image. If the user clicks on the description, this will change the display back to the image.
+To submit a new gallery item, the user can use the form at the top of the page to input a title, image URL and description and click the `Add to Gallery` button to submit.
+
+If the user wishes to delete a gallery item from the gallery, they can click the delete icon in the bottom right corner below the image they wish to delete. This will remove the item from the database and it will no longer be displayed.
+
+The user can click the thumbs-up icon to add a like the image. The amount of likes each image has is stored in the database. If the user clicks on an image, this will change the display of the associated card to show a description of that image. If the user clicks on the description, this will change the display back to the image.
 
 ## Built With
 
