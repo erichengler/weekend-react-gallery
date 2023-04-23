@@ -2,37 +2,58 @@ import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import Axios from 'axios';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import axios from 'axios';
 
-function Form() {
+function Form({ 
+    title, setTitle, path, setPath, 
+    description, setDescription, fetchGalleryList }) {
 
     const addItem = (event) => {
         event.preventDefault();
         document.getElementById("itemForm").reset();
 
-        Axios.post('/gallery', {
-
+        axios.post('/gallery', {
+            title: title,
+            path: path,
+            description: description
+        }).then((response) => {
+            setTitle('');
+            setPath('');
+            setDescription('');
+            fetchGalleryList();
+        }).catch((error) => {
+            console.log(`Error in POST ${error}`);
+            alert('Something went wrong!');
         })
     }
 
     return (
         <Container>
             <form id="itemForm" onSubmit={addItem}>
-                <Grid container width='440px' alignItems="center"
-                    justifyContent="center" margin="auto">
+                <Grid container spacing={1} width='440px' justifyContent="center" margin="auto">
                     <Grid item xs={6} >
-                        <TextField id="filled-basic" label="Title" variant="filled" />
-                        <TextField id="filled-basic" label="Image URL" variant="filled" />
+                        {/* TITLE INPUT */}
+                        <TextField id="filled-basic" label="Title" variant="filled" 
+                            onChange={e => setTitle(e.target.value)} />
+                        {/* IMAGE URL INPUT */}
+                        <TextField id="filled-basic" label="Image URL" variant="filled" 
+                            onChange={e => setPath(e.target.value)} />
                     </Grid>
                     <Grid item xs={6}>
+                        {/* DESCRIPTION INPUT */}
                         <TextField id="filled-basic" label="Description"
-                            variant="filled" multiline minRows={3.5} maxRows={3.5} />
+                            variant="filled" multiline minRows={3.5} maxRows={3.5} 
+                            onChange={e => setDescription(e.target.value)} />
                     </Grid>
                 </Grid>
                 <br />
-                <Button onClick={addItem} variant="filled">
-                    Add To Gallery
-                </Button>
+                <Grid container width='440px' justifyContent="center" margin="auto">
+                    {/* ADD TO GALLERY BUTTON */}
+                    <Button onClick={addItem} variant="filled" endIcon={<AddBoxIcon />}>
+                        Add To Gallery
+                    </Button>
+                </Grid>
                 <br /><br />
             </form>
         </Container>

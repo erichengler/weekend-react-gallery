@@ -51,5 +51,21 @@ router.put('/:id', (req, res) => {
     });
 })
 
+// POST route to add item to gallery
+router.post('/', (req, res) => {
+    console.log('POST request made for /gallery');
+    let itemToAdd = req.body;
+    let queryText = `INSERT INTO "gallery" ("title", "path", "description")
+                    VALUES ($1, $2, $3);`
+                    pool.query(queryText, 
+                        [itemToAdd.title, itemToAdd.path, itemToAdd.description])
+                        .then((result) => {
+                            res.sendStatus(201);
+                        }).catch((error) => {
+                            console.log(`Error in POST ${error}`);
+                            res.sendStatus(500);
+                        })
+})
+
 
 module.exports = router;
