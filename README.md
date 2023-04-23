@@ -10,7 +10,7 @@ I came back to this assignment and moved the data (titles, images, descriptions 
 
 ## Preview
 
-![preview](./public/images/preview.png)
+![preview](./public/images/preview2.png)
 
 ## Installation / Setup
 
