@@ -2,7 +2,7 @@
 
 ## Description
 
-Duration (base): A few days of work over a two week period
+Duration (base): A few days of work over a two week period<br />
 Duration (stretch): Another couple days
 
 The project contains a gallery of images. These images are of important people or things in my life! Each image has a title, a description, a delete icon and a thumbs-up icon with the number of likes the image has. The width of the gallery maxes out at 3 images wide. Users can post a new gallery item by using the form at the top of the page.
