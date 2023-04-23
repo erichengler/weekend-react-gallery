@@ -44,7 +44,6 @@ function GalleryItem({ item, fetchGalleryList }) {
                     </Typography>
 
                     {/* DIV that displays picture or description */}
-                    {/* TRY ADDING WIDTH AND HEIGHT TO THIS DIV TO FIX MARGIN ISSUES? */}
                     <div style={{ cursor: 'pointer' }}>
                         {
                             display === 'picture' ? (
@@ -59,8 +58,6 @@ function GalleryItem({ item, fetchGalleryList }) {
                                 </Typography>
                             ) : (
                                 <Typography
-                                    // These margin settings only work with 2 lines of text
-                                    // and at 100% zoom. Working on a fix. See line 46.
                                     sx={{ my: '90px', mx: '20px' }}
                                     onClick={(e) => setDisplay(display = 'picture')}
                                 >
@@ -71,9 +68,7 @@ function GalleryItem({ item, fetchGalleryList }) {
                     </div>
                 </CardContent>
                 
-                <CardActions sx={{ justifyContent: "flex-end", cursor: 'pointer' }}>
-
-                    {item.likes} &nbsp;
+                <CardActions sx={{ cursor: 'pointer' }}> 
                     {
                         item.likes === 0 ? (
                             <ThumbUpOutlinedIcon
@@ -85,7 +80,7 @@ function GalleryItem({ item, fetchGalleryList }) {
                             />
                         )
                     }
-
+                    &nbsp; {item.likes} 
                 </CardActions>
             </Card>
         </Grid>
