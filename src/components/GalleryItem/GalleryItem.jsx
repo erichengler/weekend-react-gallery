@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 function GalleryItem({ item, fetchGalleryList }) {
 
@@ -22,7 +23,19 @@ function GalleryItem({ item, fetchGalleryList }) {
         }).catch(error => {
             console.log(`Error in addLike ${error}`);
             alert('Something went wrong.');
-        })
+        });
+    }
+
+    const removeItem = (e) => {
+        console.log(`removeItem ${item.id}`);
+        if (window.confirm("Are you sure you want to delete?")) {
+            axios.delete(`/gallery/${item.id}`).then((response) => {
+                fetchGalleryList();
+            }).catch((error) => {
+                console.log(`Error in removeTask ${error}`);
+                alert('Something went wrong!');
+            });
+        }
     }
 
     return (
@@ -42,7 +55,6 @@ function GalleryItem({ item, fetchGalleryList }) {
                     <Typography variant="h5">
                         {item.title}
                     </Typography>
-
                     {/* DIV that displays picture or description */}
                     <div style={{ cursor: 'pointer' }}>
                         {
@@ -67,20 +79,29 @@ function GalleryItem({ item, fetchGalleryList }) {
                         }
                     </div>
                 </CardContent>
-                
-                <CardActions sx={{ cursor: 'pointer' }}> 
+                <CardActions>
                     {
                         item.likes === 0 ? (
                             <ThumbUpOutlinedIcon
+                                sx={{ cursor: 'pointer' }}
                                 onClick={(e) => addLike(e)}
                             />
                         ) : (
                             <ThumbUpAltIcon
+                                sx={{ cursor: 'pointer' }}
                                 onClick={(e) => addLike(e)}
                             />
                         )
                     }
-                    &nbsp; {item.likes} 
+                    &nbsp; {item.likes}
+
+                    <DeleteForeverIcon
+                        sx={{
+                            paddingLeft: '210px',
+                            cursor: 'pointer'
+                        }}
+                        onClick={(e) => removeItem(e)}
+                    />
                 </CardActions>
             </Card>
         </Grid>

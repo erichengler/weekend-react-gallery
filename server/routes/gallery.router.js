@@ -24,7 +24,7 @@ const pool = require('../modules/gallery.data');
 // }); 
 // END GET Route
 
-// ! Removed above to attempt stretch mode
+// ! Removed above code to attempt stretch mode
 
 // GET route for "gallery" database
 router.get('/', (req, res) => {
@@ -64,8 +64,20 @@ router.post('/', (req, res) => {
                         }).catch((error) => {
                             console.log(`Error in POST ${error}`);
                             res.sendStatus(500);
-                        })
+                        });
 })
 
+// DELETE route to delete item from gallery
+router.delete('/:id', (req, res) => {
+    console.log(req.params.id);
+    const deleteIndex = Number(req.params.id);
+    let queryText = `DELETE FROM "gallery" WHERE "id" = $1;`;
+    pool.query(queryText, [deleteIndex]).then((result) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log(`Error in DELETE ${error}`);
+        res.sendStatus(500);
+    });
+})
 
 module.exports = router;
